@@ -1,7 +1,7 @@
 //    preloader
 setTimeout(function () {
     once: true, $(".preloader_bg").fadeToggle();
-  }, 3000);
+  }, 1700);
 
 
   // backtotop-button

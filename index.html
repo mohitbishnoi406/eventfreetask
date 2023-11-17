@@ -26,11 +26,12 @@
     <!-- Meta Tags Generated with https://metatags.io -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="icon" href="./assets/images/eventlogo.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body>
+<body  class="">
     <!-- preloader -->
-    <div class="preloader_bg">
+    <div class="preloader_bg  overflow-hidden ">
         <div class="preloader"><img src="./assets/images/eventlogo.png" alt=""></div>
     </div>
     <div id="back-to-top">
@@ -72,7 +73,7 @@
                     arcu. Nunc elit elit, malesuada id suscipit cursus, </p>
                 <div class="d-flex">
                     <button class="btn2">Get Started</button>
-                    <p class="more home">Learn more</p>
+                    <p class="more ">Learn more</p>
                 </div>
                 <div class="d-flex">
                     <div class="box">
@@ -178,9 +179,11 @@
             <div class="row pb-73 align-items justify-content-betwen">
                 <div class="col-6">
                     <div class="pstn-rlv">
+                        <div data-aos="fade-up-right">
                         <img class="w-100" src="./assets/images/sec-2img.png" alt="#" />
                         <div class="position-absolute">
                             <img class="w-100" src="./assets/images/playpauselogo.png" alt="#" />
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -224,7 +227,7 @@
                                     </svg>
                                 </div>
                                 <h2 class="header text-align">Info</h2>
-                                <p class="para3">
+                                <p class="para3 ">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     Nunc efficitur urna in
                                 </p>
@@ -361,7 +364,9 @@
             </div>
             <div class="row mt-50 mb_90">
                 <div class="col-6-sm">
+                    <div data-aos="zoom-in">
                     <img class="w-100" src="./assets/images/three image section.png" alt="#" />
+                </div>
                 </div>
                 <div class="col-6-sm">
                     <div>
@@ -488,7 +493,11 @@
     </footer>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/ap.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>
