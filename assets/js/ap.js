@@ -1,8 +1,3 @@
-//    preloader
-setTimeout(function () {
-    once: true, $(".preloader_bg").fadeToggle();
-  }, 1700);
-
 
   // backtotop-button
 document.addEventListener("DOMContentLoaded", function () {

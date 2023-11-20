@@ -6,20 +6,7 @@
     box-sizing: border-box;
     list-style-type: none;
   }
-  .preloader_bg {
-    position: fixed;
-    z-index: 10;
-    background: #01c8ff;
-    width: 100%;
-    height: 100%;
-  }
-  .preloader {
-    position: absolute;
-    top: 45%;
-    left: 45%;
-    transform: translate(-50%, -30%);
-    width: 50px;
-  }
+ 
  .min-vh-100 {
     min-height: 100vh;
   }
@@ -56,11 +43,29 @@
     font-size: 36px;
     font-weight: 700;
   }
-  .home {
-    transition: 0.1s linear !important;
+  .home::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background-color: #fafafa;
+    left: 0;
+    border-radius: 20px;
+    transition: 300ms all linear;
+  } 
+  
+  .home:hover::after {
+    width: 100%;
   }
+  
   .home:hover {
-    color: #2c49fe;
+    color: #fafafa;
+  }
+  .home {
+    position: relative;
+  }
+  .feature:hover{
+    -webkit-text-stroke: 1px #fafafa;
   }
   .d-flex {
     display: flex;
@@ -77,7 +82,13 @@
   .w-100{
     max-width: 100%;
   }
-  w
+  .mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .w-765{
+    max-width: 765px;
+  }
   .w-220{
     max-width: 220px;
   }
@@ -322,8 +333,14 @@ overflow: hidden;
   .pt-46 {
     padding-top: 46px;
   }
+  .pt-20{
+    padding-top: 20px;
+  }
   .pt-50{
     padding-top: 50px;
+  }
+  .pl-5{
+    padding-left: 5px;
   }
   .ml-115 {
     margin-left: 180px;
@@ -600,7 +617,8 @@ overflow: hidden;
     font-weight: 400;
   }
   .box7 {
-    width: 100%;
+   max-width:  100%;
+   padding: 15px;
   }
   .box7:hover {
     border-radius: 5px;
@@ -608,7 +626,8 @@ overflow: hidden;
     box-shadow: 2px 9px 32px 0px rgba(0, 0, 0, 0.06);
   }
   .box8 {
-    width: 100%;
+   max-width:100%;
+   padding: 15px;
   }
   .box8:hover {
     border-radius: 5px;
@@ -630,10 +649,11 @@ overflow: hidden;
     padding: 11px 28px;
     border-radius: 23px;
     background: #2c49fe;
-    border: none;
+    border: transparent;
     margin-top: 37px;
     cursor: pointer;
   }
+  
   .sign {
     color: #fff;
     font-family: "poppins", sans-serif;
@@ -646,6 +666,7 @@ overflow: hidden;
     border: 1px dotted blue;
   }
   .sign-btn:hover .sign {
+   
     color: #2c49fe;
   }
   .bg-black {
@@ -702,7 +723,7 @@ overflow: hidden;
     font-family: "poppins", sans-serif;
     font-size: 12px;
     font-weight: 400;
-    padding-top: 18px;
+    padding-top: 10px;
   }
   .ullamcorper {
     color: #fff;
@@ -754,8 +775,8 @@ overflow: hidden;
   }
   .position-absolute-arw {
     position: absolute;
-    top: 85%;
-    left: 75%;
+    top: 40%;
+    right: 8%;
   }
   .line8 {
     height: 2px;
@@ -782,8 +803,7 @@ overflow: hidden;
     right: 20px;
     height: 50px;
     width: 50px;
-    background-color: var(--black1);
-    color: var(--black1);
+    color:  #2d3cae87;
     border: none;
     border-radius: 50%;
     padding: 10px;
@@ -795,18 +815,19 @@ overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      position: relative;
-      z-index: 3;
+      position: fixed;
+      right: 5%;
+      z-index: 5;
       cursor: pointer;
     }
     label[for="icon"]>span {
       width: 100%;
-      background-color: #fafafa;
+      background-color: #01c8ff;
       height: 5px;
       border-radius: 2px;
     }
     ul.mobile-view {
-      background-color: #01c8ff;
+      background-color: #000;
       width: 100%;
       height: 100%;
       display: flex;
@@ -816,7 +837,7 @@ overflow: hidden;
       position: fixed;
       right: -100%;
       top: 0;
-      z-index: 2;
+      z-index: 4;
       transition: all 300ms linear;
     }
     input[type="checkbox"]:checked+ul {
@@ -938,6 +959,9 @@ overflow: hidden;
       height: 198px;
       border-radius: 5px;
     }
+    .gap-5{
+      gap: 5px;
+    }
     .event {
       font-size: 26px;
     }
@@ -957,11 +981,11 @@ overflow: hidden;
     }
     .card-2 {
       margin-top: 50px;
-      left: 15%;
+      left: 12%;
     }
     .card-1{
       margin-top: 40px;
-      left: 15%;
+      left: 11%;
     }
     .head {
       font-size: 24px;
@@ -971,11 +995,9 @@ overflow: hidden;
     }
     .card-3 {
       margin-top: 50px;
-      left: 7%;
+      left: 10%;
     }
-    .w-100 {
-      margin-top: 20px;
-    }
+  
     .date {
       margin-left: 0px;
     }
@@ -1111,8 +1133,7 @@ overflow: hidden;
     .free {
       font-size: 36px;
     }
-  
-    a {
+    .a {
       font-size: 16px;
     }
     .navbar {
